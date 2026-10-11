@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-teal: #155E59;
+  --color-primary-teal-hover: #0F4541;
+  --color-primary-teal-light: #1D7A73;
+  --color-primary-teal-subtle: #EEF6F4;
+  
+  --color-warm-white: #FAFAF7;
+  --color-charcoal: #202B2A;
+  --color-charcoal-muted: #516260;
+  --color-charcoal-subtle: #798B89;
+  
+  --color-muted-green: #E4F2E9;
+  --color-muted-green-border: #C8E3D2;
+  --color-muted-green-text: #1B5E38;
+  
+  --color-soft-grey: #E8ECE9;
+  --color-border-subtle: #D9E0DD;
+  
+  --color-muted-amber: #F8ECCC;
+  --color-muted-amber-border: #EADBAC;
+  --color-muted-amber-text: #7D5B11;
+  
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Base resets & typography */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAF7;
+  color: #202B2A;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #155E59;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9E0DD;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #798B89;
+}
+
+/* Print optimizations for Proof Cards */
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  #printable-proof-card {
+    border: 2px solid #000000 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin: 0 auto;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
