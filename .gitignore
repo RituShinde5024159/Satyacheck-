@@ -1,7 +1,36 @@
-﻿.env
+# Secrets and local environment configuration
+.env
+.env.*
+!.env.example
+
+# Python environments, bytecode, and test/tool caches
 .venv/
+venv/
+env/
 __pycache__/
+*.py[cod]
+*$py.class
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Node.js dependencies and generated frontend output
 node_modules/
 dist/
-*.py[cod]
+coverage/
+*.tsbuildinfo
+
+# Logs and local runtime files
+*.log
+*.sqlite
+*.sqlite3
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
